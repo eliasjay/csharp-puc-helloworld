@@ -724,7 +724,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.NETCore.App >= 2.1.0",
-      "MySqlConnector"
+      "MySqlConnector >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -773,7 +773,7 @@
           },
           "MySqlConnector": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

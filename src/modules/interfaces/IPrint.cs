@@ -4,6 +4,6 @@ namespace trabalho1
 {
   abstract class IPrint
   {
-    public abstract void print();
+    public abstract void print<T>(T data);
   }
 }

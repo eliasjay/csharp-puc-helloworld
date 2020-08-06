@@ -83,6 +83,6 @@ namespace trabalho1
       this.id = id;
       this.subjects = subjects;
     }
-    override public void print() { }
+    override public void print<T>(T t) {}
   }
 }

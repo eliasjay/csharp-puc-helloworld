@@ -8,6 +8,6 @@ namespace trabalho1
     public String name {get; set;}
     public List<Period> periods {get; set;}
 
-    override public void print(){}
+    override public void print<T>(T t){}
   }
 }
