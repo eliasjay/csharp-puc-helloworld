@@ -5,7 +5,7 @@ namespace trabalho1
 {
   class Subject : IPrint
   {
-    public int id { get; set; }
+    public Guid id { get; set; }
     public String name { get; set; }
     public List<int> preRequests { get; set; }
     public int nTheoricClasses { get; set; }
@@ -24,6 +24,7 @@ namespace trabalho1
       int clockClasses
     )
     {
+      this.id = Guid.NewGuid();
       this.name = name;
       this.preRequests = preRequests;
       this.nTheoricClasses = nTheoricClasses;
@@ -35,6 +36,7 @@ namespace trabalho1
 
     override public void print<Subject>(Subject subject)
     {
+      Console.WriteLine($"ID: {id}");
       Console.WriteLine($"Name: {name}");
       Console.WriteLine("Pre Requests: " + String.Join(", ", preRequests));
       Console.WriteLine($"Theorical Classes: {nTheoricClasses}");

@@ -5,7 +5,7 @@ namespace trabalho1
 {
   class Period : IPrint
   {
-    public int id { get; set; }
+    public Guid id { get; set; }
     public List<Subject> subjects { get; set; }
     private int totalNTheoricClasses
     {
@@ -78,11 +78,12 @@ namespace trabalho1
       }
     }
 
-    public Period(int id, List<Subject> subjects)
+    public Period(List<Subject> subjects)
     {
-      this.id = id;
+      this.id = Guid.NewGuid();
       this.subjects = subjects;
     }
-    override public void print<T>(T t) {}
+
+    override public void print<T>(T t) { }
   }
 }

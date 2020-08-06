@@ -20,6 +20,11 @@ namespace trabalho1
       );
 
       subTest.print(subTest);
+
+      List<Subject> subjects = new List<Subject>{};
+      subjects.Add(subTest);
+
+      Period period = new Period(subjects);
     }
   }
 }
