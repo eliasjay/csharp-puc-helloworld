@@ -2,7 +2,7 @@ using System;
 
 namespace trabalho1
 {
-  class ErrorHandler : System.Exception
+  class ErrorHandler : Exception
   {
     public readonly String message;
     public readonly int statusCode;

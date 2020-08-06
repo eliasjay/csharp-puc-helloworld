@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\projects\\puc-backend\\trabalho1\\trabalho1.csproj": {}
+    "C:\\dev\\projects\\puc-backend\\csharp-puc-helloworld\\trabalho1.csproj": {}
   },
   "projects": {
-    "C:\\dev\\projects\\puc-backend\\trabalho1\\trabalho1.csproj": {
+    "C:\\dev\\projects\\puc-backend\\csharp-puc-helloworld\\trabalho1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\projects\\puc-backend\\trabalho1\\trabalho1.csproj",
+        "projectUniqueName": "C:\\dev\\projects\\puc-backend\\csharp-puc-helloworld\\trabalho1.csproj",
         "projectName": "trabalho1",
-        "projectPath": "C:\\dev\\projects\\puc-backend\\trabalho1\\trabalho1.csproj",
+        "projectPath": "C:\\dev\\projects\\puc-backend\\csharp-puc-helloworld\\trabalho1.csproj",
         "packagesPath": "C:\\Users\\zelia\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\projects\\puc-backend\\trabalho1\\obj\\",
+        "outputPath": "C:\\dev\\projects\\puc-backend\\csharp-puc-helloworld\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,10 @@
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "(, )"
             }
           },
           "imports": [

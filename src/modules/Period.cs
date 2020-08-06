@@ -7,12 +7,76 @@ namespace trabalho1
   {
     public int id { get; set; }
     public List<Subject> subjects { get; set; }
-    private int totalNTheoricClasses { get; set; }
-    private int totalNPraticClasses { get; set; }
-    private int totalNCredits { get; set; }
-    private double totalHoursClasses { get; set; }
-    private double totalClockClasses { get; set; }
-    private List<double> subjectHours { get; set; }
+    private int totalNTheoricClasses
+    {
+      get
+      {
+        int total = 0;
+
+        foreach (Subject subject in subjects)
+        {
+          total += subject.nTheoricClasses;
+        }
+
+        return total;
+      }
+    }
+    private int totalNPraticClasses
+    {
+      get
+      {
+        int total = 0;
+
+        foreach (Subject subject in subjects)
+        {
+          total += subject.nPraticClasses;
+        }
+
+        return total;
+      }
+    }
+    private int totalNCredits
+    {
+      get
+      {
+        int total = 0;
+
+        foreach (Subject subject in subjects)
+        {
+          total += subject.nCredits;
+        }
+
+        return total;
+      }
+    }
+    private double totalHoursClasses
+    {
+      get
+      {
+        int total = 0;
+
+        foreach (Subject subject in subjects)
+        {
+          total += subject.hoursClasses;
+        }
+
+        return total;
+      }
+    }
+    private double totalClockClasses
+    {
+      get
+      {
+        int total = 0;
+
+        foreach (Subject subject in subjects)
+        {
+          total += subject.clockClasses;
+        }
+
+        return total;
+      }
+    }
 
     public Period(int id, List<Subject> subjects)
     {
@@ -20,43 +84,5 @@ namespace trabalho1
       this.subjects = subjects;
     }
     override public void print() { }
-
-    public List<double> sumTotalSubjectsHours(List<Subject> subjects)
-    {
-      foreach (Subject subject in subjects)
-      {
-        try
-        {
-          this.totalClockClasses += subject.clockClasses;
-        }
-        catch (System.Exception exception)
-        {
-          new ErrorLog(exception);
-          throw new ErrorHandler($"This subject ({subject}) doesn't have Clock Classes");
-        }
-
-        this.totalNTheoricClasses += subject.nTheoricClasses;
-        this.totalNPraticClasses += subject.nPraticClasses;
-        this.totalNCredits += subject.nCredits;
-        this.totalHoursClasses += subject.hoursClasses;
-      }
-
-      subjectHours.Add(this.totalNTheoricClasses);
-      subjectHours.Add(this.totalNPraticClasses);
-      subjectHours.Add(this.totalNCredits);
-      subjectHours.Add(this.totalHoursClasses);
-
-      try
-      {
-        subjectHours.Add(this.totalClockClasses);
-      }
-      catch (System.Exception exception)
-      {
-        new ErrorLog(exception);
-        throw new ErrorHandler("This period doesn't have a total of Clock Classes");
-      }
-
-      return subjectHours;
-    }
   }
 }

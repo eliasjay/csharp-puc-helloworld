@@ -11,8 +11,8 @@ namespace trabalho1
     public int nTheoricClasses { get; set; }
     public int nPraticClasses { get; set; }
     public int nCredits { get; set; }
-    public double hoursClasses { get; set; }
-    public double clockClasses { get; set; }
+    public int hoursClasses { get; set; }
+    public int clockClasses { get; set; }
 
     override public void print() { }
   }
